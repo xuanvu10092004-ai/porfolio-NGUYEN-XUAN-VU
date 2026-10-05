@@ -3,6 +3,7 @@ const titleElement = document.querySelector('.title');
 const textToType = "AI Student & Application Developer";
 let typingIndex = 0;
 let isTyping = true;
+const enableTypingEffect = false;
 
 function typeWriter() {
     if (isTyping && typingIndex < textToType.length) {
@@ -18,6 +19,7 @@ function typeWriter() {
 
 // Chạy hiệu ứng khi tải trang xong
 window.addEventListener('load', () => {
+    if (!enableTypingEffect) return;
     // Xóa text mẫu HTML đi trước khi chạy hiệu ứng (nếu cần)
     titleElement.innerHTML = '<span class="cursor">|</span>';
     setTimeout(typeWriter, 500); // Trì hoãn một chút trước khi gõ

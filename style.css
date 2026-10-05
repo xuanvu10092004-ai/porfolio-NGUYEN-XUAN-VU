@@ -99,32 +99,6 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
-/* Robot Trang trí bay lơ lửng */
-.robot-decor {
-    position: absolute;
-    width: 180px;
-    opacity: 0.9;
-    animation: float 4s ease-in-out infinite;
-    z-index: 10; 
-    pointer-events: none;
-    mix-blend-mode: multiply; 
-}
-
-.robot-decor-2 {
-    position: absolute;
-    width: 140px;
-    opacity: 0.85;
-    animation: float 5s ease-in-out infinite reverse;
-    z-index: 10; 
-    pointer-events: none;
-    mix-blend-mode: multiply; 
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-}
 
 /* ===== NAVBAR ===== */
 #navbar {
@@ -256,15 +230,6 @@ h1, h2, h3, h4 {
     font-size: clamp(30px, 6vw, 60px);
     color: var(--text-secondary);
     margin-bottom: 30px;
-}
-
-.cursor {
-    animation: blink 1s step-end infinite;
-    color: var(--accent-color);
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
 }
 
 .description {
@@ -628,9 +593,6 @@ footer {
         text-align: center;
     }
 
-    .robot-decor {
-        display: none; /* Ẩn robot trên điện thoại cho đỡ chật */
-    }
 }
 
 /* ===== PROFESSIONAL FINISH ===== */
@@ -685,7 +647,7 @@ body::before {
 .timeline-content { border-left: 3px solid var(--accent-color); }
 .contact { min-height: auto; padding-bottom: 130px; }
 
-@media (max-width: 768px) { .hero-meta { margin-top: 38px; } .hero-meta div { min-width: 105px; padding: 0 13px; } .scroll-cue { display: none; } .robot-decor-2 { display: none; } }
+@media (max-width: 768px) { .hero-meta { margin-top: 38px; } .hero-meta div { min-width: 105px; padding: 0 13px; } .scroll-cue { display: none; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 
 /* Activities & experience */
